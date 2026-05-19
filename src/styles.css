@@ -1,0 +1,102 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Heebo", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: var(--navy);
+  --color-slate-deep: var(--slate-deep);
+  --gradient-hero: var(--gradient-hero);
+  --shadow-elegant: var(--shadow-elegant);
+  --shadow-soft: var(--shadow-soft);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Slate / Navy / White palette */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.22 0.04 250);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.04 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.04 250);
+
+  /* Navy */
+  --primary: oklch(0.32 0.09 256);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --navy: oklch(0.28 0.10 258);
+  --slate-deep: oklch(0.42 0.05 252);
+
+  --secondary: oklch(0.965 0.01 250);
+  --secondary-foreground: oklch(0.28 0.06 256);
+
+  --muted: oklch(0.965 0.01 250);
+  --muted-foreground: oklch(0.50 0.03 252);
+
+  --accent: oklch(0.94 0.02 250);
+  --accent-foreground: oklch(0.28 0.06 256);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.005 250);
+
+  --border: oklch(0.92 0.01 250);
+  --input: oklch(0.92 0.01 250);
+  --ring: oklch(0.32 0.09 256);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.99 0.005 250) 0%, oklch(0.95 0.02 250) 50%, oklch(0.90 0.03 252) 100%);
+  --shadow-elegant: 0 20px 50px -20px color-mix(in oklab, var(--navy) 35%, transparent);
+  --shadow-soft: 0 8px 24px -12px color-mix(in oklab, var(--navy) 20%, transparent);
+
+  --sidebar: oklch(0.99 0.005 250);
+  --sidebar-foreground: oklch(0.22 0.04 250);
+  --sidebar-primary: oklch(0.32 0.09 256);
+  --sidebar-primary-foreground: oklch(0.99 0.005 250);
+  --sidebar-accent: oklch(0.94 0.02 250);
+  --sidebar-accent-foreground: oklch(0.28 0.06 256);
+  --sidebar-border: oklch(0.92 0.01 250);
+  --sidebar-ring: oklch(0.32 0.09 256);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    font-family: var(--font-sans);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
